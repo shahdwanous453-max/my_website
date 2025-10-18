@@ -1,0 +1,554 @@
+/* 
+ * ملف التصميم الرئيسي لموقع دليل فعاليات المدينة
+ * هوية جديدة: فضي، أسود، وذهبي أنيق
+ */
+
+/* إعدادات عامة */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* تخصيص الألوان الأساسية - هوية جديدة */
+:root {
+  --primary-color: #c0a062; /* ذهبي أنيق */
+  --secondary-color: #2c3e50; /* أزرق داكن/أسود */
+  --accent-color: #d4af37; /* ذهبي فاتح */
+  --silver-color: #e0e0e0; /* فضي */
+  --dark-color: #1a1a1a; /* أسود */
+  --light-color: #f5f5f5; /* فضي فاتح */
+  --success-color: #27ae60; /* أخضر */
+  --warning-color: #f39c12; /* برتقالي */
+  --danger-color: #e74c3c; /* أحمر */
+}
+
+/* تصميم Navbar - جديد */
+.navbar {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--dark-color)
+  ) !important;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--silver-color) !important;
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+/* Hero Section - قسم الفعاليات البارزة */
+.hero-section {
+  background: linear-gradient(to bottom, #ffffff, var(--light-color));
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 2px solid var(--primary-color);
+}
+
+.slider-wrapper {
+  position: relative;
+  height: 500px;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.featured-card {
+  height: 100%;
+  border: none;
+  background: var(--light-color);
+}
+
+.featured-card .card-img-top {
+  height: 350px;
+  object-fit: cover;
+}
+
+.featured-card .card-body {
+  text-align: center;
+  padding: 2rem;
+  background: var(--light-color);
+}
+
+.featured-card .card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(192, 160, 98, 0.9);
+  border: none;
+  color: var(--dark-color);
+  font-size: 2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.slider-btn:hover {
+  background: var(--primary-color);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slider-btn.prev {
+  left: 20px;
+}
+
+.slider-btn.next {
+  right: 20px;
+}
+
+/* Categories Section - قسم التصنيفات */
+.categories-section {
+  background: var(--light-color);
+}
+
+.categories-section h2 {
+  color: var(--secondary-color);
+  font-weight: 700;
+}
+
+/* Event Cards - بطاقات الفعاليات */
+.event-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  border: 1px solid var(--silver-color);
+}
+
+.event-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+}
+
+.event-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.event-card .card-title {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Badges - محدث */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+
+.badge-culture {
+  background: linear-gradient(135deg, #8e44ad, #9b59b6);
+  color: white;
+}
+
+.badge-sports {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+}
+
+.badge-music {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+}
+
+.badge-family {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+}
+
+.badge-food {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  color: white;
+}
+
+/* Buttons - محدث */
+.btn-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  border: none;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  color: var(--dark-color);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(192, 160, 98, 0.4);
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    var(--primary-color)
+  );
+  color: var(--dark-color);
+}
+
+/* أزرار التصنيفات في الرئيسية */
+.btn-outline-culture {
+  border: 2px solid #8e44ad;
+  color: #8e44ad;
+  background: transparent;
+}
+
+.btn-outline-culture:hover {
+  background: #8e44ad;
+  color: white;
+}
+
+.btn-outline-sports {
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+  background: transparent;
+}
+
+.btn-outline-sports:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-outline-music {
+  border: 2px solid #3498db;
+  color: #3498db;
+  background: transparent;
+}
+
+.btn-outline-music:hover {
+  background: #3498db;
+  color: white;
+}
+
+.btn-outline-family {
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  background: transparent;
+}
+
+.btn-outline-family:hover {
+  background: #27ae60;
+  color: white;
+}
+
+.btn-outline-food {
+  border: 2px solid #e67e22;
+  color: #e67e22;
+  background: transparent;
+}
+
+.btn-outline-food:hover {
+  background: #e67e22;
+  color: white;
+}
+
+/* Footer - محدث */
+footer {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--dark-color)
+  ) !important;
+  border-top: 3px solid var(--primary-color);
+}
+
+footer h5 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: var(--silver-color) !important;
+}
+
+footer a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slider-wrapper {
+    height: 400px;
+  }
+
+  .featured-card .card-img-top {
+    height: 250px;
+  }
+
+  .featured-card .card-title {
+    font-size: 1.3rem;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 5px 15px;
+  }
+
+  .btn-lg {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Filter Toolbar - شريط الفلترة */
+.filter-toolbar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid var(--silver-color);
+}
+
+/* Event Detail Page */
+.event-detail-header {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--dark-color)
+  );
+  color: white;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.event-map {
+  height: 300px;
+  background: var(--light-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--silver-color);
+}
+
+/* Contact Form */
+.contact-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--silver-color);
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 2px solid var(--silver-color);
+  padding: 0.8rem;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(192, 160, 98, 0.25);
+}
+
+/* About Page - صفحة عن الدليل */
+.team-member {
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid var(--silver-color);
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 5px solid var(--primary-color);
+}
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  z-index: 1000;
+  font-weight: bold;
+}
+
+.scroll-top:hover {
+  background: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.scroll-top.show {
+  display: flex;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* تنسيق معرض الصور */
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--silver-color);
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
+}
+
+/* تنسيق أعمدة المعرض */
+.row.g-3 .col-md-4 {
+  margin-bottom: 1rem;
+}
+
+/* تنسيق إضافي لمعرض الصور في صفحة event.html */
+.card .row.g-3 {
+  margin-top: 1rem;
+}
+
+.card .row.g-3 .col-md-4 {
+  padding: 0.5rem;
+}
+
+/* Cards عامة */
+.card {
+  border: 1px solid var(--silver-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  border-color: var(--primary-color);
+}
+
+/* Social Media Buttons في صفحة الاتصال */
+.btn-outline-primary {
+  border-color: #3498db;
+  color: #3498db;
+}
+
+.btn-outline-primary:hover {
+  background: #3498db;
+  color: white;
+}
+
+.btn-outline-info {
+  border-color: #17a2b8;
+  color: #17a2b8;
+}
+
+.btn-outline-info:hover {
+  background: #17a2b8;
+  color: white;
+}
+
+.btn-outline-danger {
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.btn-outline-danger:hover {
+  background: #e74c3c;
+  color: white;
+}
+
+.btn-outline-dark {
+  border-color: #343a40;
+  color: #343a40;
+}
+
+.btn-outline-dark:hover {
+  background: #343a40;
+  color: white;
+}
