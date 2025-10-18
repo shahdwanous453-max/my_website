@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دليل فعاليات المدينة - الرئيسية</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+<!-- Header with Navbar -->
+ 
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <strong data-translate="site-title">🎪 دليل فعاليات المدينة</strong>
+      </a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html" data-translate="nav-home">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" data-translate="nav-events">كل الفعاليات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" data-translate="nav-about">عن الدليل</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html" data-translate="nav-contact">اتصل بنا</a>
+          </li>   
+          <!-- زر الترجمة -->
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    🌍
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+    <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">🇸🇾 العربية</a></li>
+    <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">🇺🇸 English</a></li>
+  </ul>
+</li>
+    
+        </ul>
+      </div>
+    </div>
+    
+  </nav>
+</header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Featured Events Slider Section -->
+      <section class="hero-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4" data-translate="featured-events">🌟 فعاليات بارزة هذا الأسبوع</h2>
+          <div id="featuredSlider" class="slider-container">
+            <div class="slider-wrapper">
+              <div class="slide active">
+                <div class="card featured-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGljfGVufDB8fDB8fHww"
+                    class="card-img-top"
+                    alt="مهرجان الربيع" />
+                  <div class="card-body">
+                    <h3 class="card-title">مهرجان الربيع السنوي</h3>
+                    <p class="card-text">
+                      احتفالية كبرى بقدوم الربيع مع فعاليات ترفيهية للعائلة
+                    </p>
+                    <span class="badge bg-success">عائلي</span>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="card featured-card">
+                  <img
+                    src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg"
+                    class="card-img-top"
+                    alt="حفل موسيقي" />
+                  <div class="card-body">
+                    <h3 class="card-title">حفل موسيقي تحت النجوم</h3>
+                    <p class="card-text">
+                      أمسية موسيقية رائعة مع فرقة سيمفونية محلية
+                    </p>
+                    <span class="badge bg-info">موسيقى</span>
+                  </div>
+                </div>
+              </div>
+              <div class="slide">
+                <div class="card featured-card">
+                  <img src="https://images.pexels.com/photos/2029660/pexels-photo-2029660.jpeg" class="card-img-top" alt="معرض فني" />
+                  <div class="card-body">
+                    <h3 class="card-title">معرض الفن المعاصر</h3>
+                    <p class="card-text">
+                      أعمال فنية رائعة من فنانين محليين وعالميين
+                    </p>
+                    <span class="badge bg-warning">ثقافة</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-btn prev" onclick="changeSlide(-1)">❮</button>
+            <button class="slider-btn next" onclick="changeSlide(1)">❯</button>
+          </div>
+        </div>
+      </section>
+<!-- Quick Categories Section -->
+<section class="categories-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4" data-translate="quick-categories">📋 تصنيفات سريعة</h2>
+    <div class="text-center">
+      <button
+        class="btn btn-outline-culture btn-lg m-2"
+        onclick="filterCategory('culture')">
+        🎭 ثقافة
+      </button>
+      <button
+        class="btn btn-outline-sports btn-lg m-2"
+        onclick="filterCategory('sports')">
+        ⚽ رياضة
+      </button>
+      <button
+        class="btn btn-outline-music btn-lg m-2"
+        onclick="filterCategory('music')">
+        🎵 موسيقى
+      </button>
+      <button
+        class="btn btn-outline-family btn-lg m-2"
+        onclick="filterCategory('family')">
+        👨‍👩‍👧‍👦 عائلي
+      </button>
+      <button
+        class="btn btn-outline-food btn-lg m-2"
+        onclick="filterCategory('food')">
+        🍽️ طعام
+      </button>
+    </div>
+  </div>
+</section>
+      <!-- Latest Events Section -->
+      <section class="latest-events py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4" data-translate="latest-events">🎉 أحدث الفعاليات</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/3689547/pexels-photo-3689547.jpeg?_gl=1*l5bb0r*_ga*MTYyNTA5MDE1MC4xNzU5OTI1MTEw*_ga_8JE65Q40S6*czE3NTk5MjUxMDkkbzEkZzEkdDE3NTk5MjYzNDMkajMzJGwwJGgw"
+                  class="card-img-top"
+                  alt="مسرحية" />
+                <div class="card-body">
+                  <span class="badge bg-warning mb-2">ثقافة</span>
+                  <h5 class="card-title">مسرحية "الحلم الكبير"</h5>
+                  <p class="card-text">📅 15 أكتوبر 2025 | 📍 المسرح الوطني</p>
+                  <p class="card-text text-muted">عرض مسرحي درامي مميز</p>
+                  <a href="event.html?id=1" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/2402734/pexels-photo-2402734.jpeg"
+                  class="card-img-top"
+                  alt="ماراثون" />
+                <div class="card-body">
+                  <span class="badge bg-danger mb-2">رياضة</span>
+                  <h5 class="card-title">ماراثون المدينة</h5>
+                  <p class="card-text">📅 20 أكتوبر 2025 | 📍 شارع الجمهورية</p>
+                  <p class="card-text text-muted">سباق رياضي لكل الأعمار</p>
+                <a href="event.html?id=2" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+
+                </div>   
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/32351726/pexels-photo-32351726.jpeg?_gl=1*e8yz5i*_ga*MTYyNTA5MDE1MC4xNzU5OTI1MTEw*_ga_8JE65Q40S6*czE3NTk5MjUxMDkkbzEkZzEkdDE3NTk5MjgzMjckajU3JGwwJGgw"
+                  class="card-img-top"
+                  alt="مهرجان طعام" />
+                <div class="card-body">
+                  <span class="badge bg-primary mb-2">طعام</span>
+                  <h5 class="card-title">مهرجان الطعام الدولي</h5>
+                  <p class="card-text">📅 25 أكتوبر 2025 | 📍 ساحة المدينة</p>
+                  <p class="card-text text-muted">تذوق أشهى الأطباق العالمية</p>
+<a href="event.html?id=3" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/7026051/pexels-photo-7026051.jpeg"
+                  class="card-img-top"
+                  alt="ورشة رسم" />
+                <div class="card-body">
+                  <span class="badge bg-success mb-2">عائلي</span>
+                  <h5 class="card-title">ورشة رسم للأطفال</h5>
+                  <p class="card-text">📅 28 أكتوبر 2025 | 📍 مركز الفنون</p>
+                  <p class="card-text text-muted">
+                    نشاط فني للأطفال من 5-12 سنة
+                  </p>
+<a href="event.html?id=4" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/9001963/pexels-photo-9001963.jpeg"
+                  class="card-img-top"
+                  alt="حفل جاز" />
+                <div class="card-body">
+                  <span class="badge bg-info mb-2">موسيقى</span>
+                  <h5 class="card-title">ليلة الجاز</h5>
+                  <p class="card-text">📅 30 أكتوبر 2025 | 📍 نادي الموسيقى</p>
+                  <p class="card-text text-muted">
+                    أمسية موسيقية مع فرقة جاز محترفة
+                  </p>
+<a href="event.html?id=5" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 event-card">
+                <img
+                  src="https://images.pexels.com/photos/33588634/pexels-photo-33588634.jpeg"
+                  class="card-img-top"
+                  alt="معرض الكتاب السنوي" />
+                <div class="card-body">
+                  <span class="badge bg-warning mb-2">ثقافة</span>
+                  <h5 class="card-title">معرض الكتاب السنوي</h5>
+                  <p class="card-text">📅 5 نوفمبر 2025 | 📍 قصر المعارض</p>
+                  <p class="card-text text-muted">أكبر معرض للكتب في المنطقة</p>
+<a href="event.html?id=6" class="btn btn-primary" data-translate="details-btn">التفاصيل</a>
+                </div>
+              </div>
+            </div>
+     <div class="col-md-4">
+  <div class="card h-100 event-card">
+    <img
+      src="متةة.jpeg"
+      class="card-img-top"
+      alt="مهرجان المتة الترفيهي" />
+    <div class="card-body">
+      <span class="badge bg-warning mb-2">ترفيه</span>
+      <h5 class="card-title">مهرجان المتة االترفيهي</h5>
+      <p class="card-text">📅 12 نوفمبر 2025 | 📍 وادي العيون - مصياف</p>
+      <p class="card-text text-muted">
+        احتفالية ثقافية تجمع محبي المتة وتقاليدها الأصيلة
+      </p>
+      <a href="event.html?id=10" class="btn btn-primary">التفاصيل</a>
+    </div>
+  </div>
+</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>دليل فعاليات المدينة</h5>
+            <p>دليلك الشامل لجميع الفعاليات والأنشطة في مدينتك</p>
+          </div>
+          <div class="col-md-4">
+            <h5>تواصل معنا</h5>
+            <p>📧 info@it-engineer-squad.com</p>
+            <p>📱 +963-333-757-575</p>
+          </div>
+          <div class="col-md-4">
+            <h5>تابعنا</h5>
+            <p>
+              <a href="#" class="text-white me-3">Facebook</a>
+              <a href="#" class="text-white me-3">Twitter</a>
+              <a href="#" class="text-white">Instagram</a>
+            </p>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="text-center">
+          <p class="mb-1">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+          <p class="mb-0">
+            <small
+              >فريق العمل:
+               [شهد عمّار ونّوس] - [shahd_285085] | [رغد العزي ] - [raghad_176259] |
+              [ رؤى الشليان] - [rouaa_246534] |[ علي فهد ابراهيم] - [ali_284647] |[محمد نور كباريتي ] - [muhmmad_noor_195487] |</small
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

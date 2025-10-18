@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل الفعالية - دليل فعاليات المدينة</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <style>
+      .event-detail-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 0;
+        margin-bottom: 2rem;
+      }
+      .event-map {
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 2rem;
+        text-align: center;
+        border: 2px dashed #dee2e6;
+      }
+      .badge-food {
+        background-color: #28a745 !important;
+        color: white;
+      }
+      .card {
+        border: none;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+      }
+      .card-body {
+        padding: 1.5rem;
+      }
+      .btn-primary {
+        background-color: #667eea;
+        border-color: #667eea;
+        padding: 0.5rem 1.5rem;
+      }
+      .btn-primary:hover {
+        background-color: #5a6fd8;
+        border-color: #5a6fd8;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header with Navbar -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <strong>🎪 دليل فعاليات المدينة</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="events.html">كل الفعاليات</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">عن الدليل</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">اتصل بنا</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Event Header -->
+    <div class="event-detail-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <span class="badge bg-warning mb-3" style="font-size: 1.1rem"
+              >ثقافة</span
+            >
+            <h1 class="display-4 fw-bold">مسرحية "الحلم الكبير"</h1>
+            <p class="lead">
+              عرض مسرحي درامي مميز يحكي قصة ملهمة عن الطموح والأمل
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Main Info -->
+          <div class="col-lg-8">
+            <!-- Event Image -->
+            <div class="mb-4">
+              <img
+                src="https://images.pexels.com/photos/6899763/pexels-photo-6899763.jpeg"
+                class="img-fluid rounded shadow"
+                alt="مسرحية"
+              />
+            </div>
+
+            <!-- Event Description -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">📖 عن الفعالية</h3>
+                <p class="card-text">
+                  تقدم لكم فرقة المسرح الوطني عرضاً استثنائياً لمسرحية "الحلم
+                  الكبير"، وهي قصة درامية تدور حول مجموعة من الشباب الذين يسعون
+                  لتحقيق أحلامهم رغم كل التحديات.
+                </p>
+                <p class="card-text">
+                  مدة العرض: ساعتين ونصف مع استراحة قصيرة. مناسب للعائلات
+                  والشباب. الدخول من عمر 12 سنة فما فوق
+                </p>
+                <h5 class="mt-4">🎭 فريق العمل:</h5>
+                <ul>
+                  <li><strong>الإخراج:</strong>رؤى الشليان</li>
+                  <li><strong>التأليف:</strong> رغد العزي</li>
+                  <li>
+                    <strong>البطولة:</strong> محمد نور كباريتي ، علي فهد
+                    ابراهيم، شهد عمّارونّوس
+                  </li>
+                  <li><strong>الديكور:</strong> فريق الإنتاج الفني</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Event Activities -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">🎪 أنشطة الفعالية</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="text-center mb-3">
+                      <div class="display-4">🏆</div>
+                      <h6>مسابقة أفضل كأس متة</h6>
+                      <p class="small text-muted">تنافس في تحضير ألذ كأس متة</p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center mb-3">
+                      <div class="display-4">🎨</div>
+                      <h6>ورش عمل تراثية</h6>
+                      <p class="small text-muted">
+                        تعلم طرق تحضير المتة التقليدية
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="text-center mb-3">
+                      <div class="display-4">📸</div>
+                      <h6>ركن التصوير</h6>
+                      <p class="small text-muted">التقط صوراً تراثية تذكارية</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">📸 معرض الصور</h3>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/5778899/pexels-photo-5778899.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 1"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/1767014/pexels-photo-1767014.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 2"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/1752757/pexels-photo-1752757.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 3"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/8512617/pexels-photo-8512617.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 4"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/8887061/pexels-photo-8887061.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 5"
+                    />
+                  </div>
+                  <div class="col-md-4">
+                    <img
+                      src="https://images.pexels.com/photos/167491/pexels-photo-167491.jpeg"
+                      class="img-fluid rounded"
+                      alt="صورة 6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location Map -->
+            <div class="card mb-4">
+              <div class="card-body">
+                <h3 class="card-title">🗺️ الموقع</h3>
+                <div class="event-map mb-3">
+                  <div class="text-center">
+                    <h5>📍 المسرح الوطني</h5>
+                    <p>شارع الجمهورية - وسط المدينة</p>
+                    <small class="text-muted">خريطة توضيحية للموقع</small>
+                  </div>
+                </div>
+                <p class="mb-0"><strong>كيفية الوصول:</strong></p>
+                <ul>
+                  <li>بالسيارة: موقف مجاني متاح خلف المسرح</li>
+                  <li>بالمواصلات العامة: باص رقم 15، 27، 40</li>
+                  <li>مترو: محطة ساحة الجمهورية (5 دقائق سيراً)</li>
+                  <li>تاكسي: متوفر بشكل دائم أمام المسرح</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Related Events -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title">🎭 فعاليات ذات صلة</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="card">
+                      <img
+                        src="https://images.pexels.com/photos/860227/pexels-photo-860227.jpeg"
+                        class="card-img-top"
+                        alt="معرض"
+                      />
+                      <div class="card-body">
+                        <span class="badge bg-warning mb-2">ثقافة</span>
+                        <h6 class="card-title">معرض الفن المعاصر</h6>
+                        <p class="card-text small">📅 22 أكتوبر 2025</p>
+                        <a
+                          href="event.html?id=10"
+                          class="btn btn-sm btn-primary"
+                          >التفاصيل</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <img
+                        src="https://images.pexels.com/photos/9489942/pexels-photo-9489942.jpeg"
+                        class="card-img-top"
+                        alt="أمسية"
+                      />
+                      <div class="card-body">
+                        <span class="badge bg-warning mb-2">ثقافة</span>
+                        <h6 class="card-title">أمسية شعرية</h6>
+                        <p class="card-text small">📅 18 أكتوبر 2025</p>
+                        <a
+                          href="event.html?id=11"
+                          class="btn btn-sm btn-primary"
+                          >التفاصيل</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card">
+                      <img
+                        src="https://images.pexels.com/photos/32351726/pexels-photo-32351726.jpeg?_gl=1*e8yz5i*_ga*MTYyNTA5MDE1MC4xNzU5OTI1MTEw*_ga_8JE65Q40S6*czE3NTk5MjUxMDkkbzEkZzEkdDE3NTk5MjgzMjckajU3JGwwJGgw"
+                        class="card-img-top"
+                        alt="مهرجان الطعام الدولي"
+                      />
+                      <div class="card-body">
+                        <span class="badge badge-food mb-2">طعام</span>
+                        <h6 class="card-title">مهرجان الطعام الدولي</h6>
+                        <p class="card-text small">📅 25 أكتوبر 2025</p>
+                        <p class="card-text small text-muted">
+                          تذوق أشهى الأطباق من مختلف دول العالم
+                        </p>
+                        <a href="event.html?id=3" class="btn btn-sm btn-primary"
+                          >التفاصيل</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="col-lg-4">
+            <!-- Event Info Card -->
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h4 class="card-title mb-5">معلومات الفعالية</h4>
+
+                <div class="mb-3">
+                  <h6>📅 التاريخ والوقت</h6>
+                  <p class="mb-0">15 أكتوبر 2025</p>
+                  <p class="mb-0">الساعة 7:00 مساءً</p>
+                  <p class="mb-0 text-muted small">مدة العرض: ساعتان ونصف</p>
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                  <h6>📍 الموقع</h6>
+                  <p class="mb-0">المسرح الوطني</p>
+                  <p class="mb-0">شارع الجمهورية، وسط المدينة</p>
+                  <p class="mb-0 text-muted small">
+                    القاعة الكبرى - الطابق الأول
+                  </p>
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                  <h6>🎫 سعر التذكرة</h6>
+                  <p class="mb-0"><strong>500 ل.س</strong> - عادي</p>
+                  <p class="mb-0"><strong>800 ل.س</strong> - VIP</p>
+                  <p class="mb-0 text-muted small">خصم 20% للطلاب</p>
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                  <h6>👥 المنظم</h6>
+                  <p class="mb-0">فرقة المسرح الوطني</p>
+                  <p class="mb-0 text-muted small">بالتعاون مع وزارة الثقافة</p>
+                </div>
+
+                <hr />
+
+                <div class="mb-3">
+                  <h6>👤 الفئة العمرية</h6>
+                  <p class="mb-0">من 12 سنة فما فوق</p>
+                </div>
+
+                <hr />
+
+                <div class="mb-4">
+                  <h6>📞 للاستفسار</h6>
+                  <p class="mb-0">+963-11-1234567</p>
+                  <p class="mb-0">tickets@nationaltheater.sy</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-grid gap-2">
+                  <button
+                    class="btn btn-primary btn-lg"
+                    onclick="openBookingModal('مسرحية الحلم الكبير')"
+                  >
+                    🎫 احجز مكانك
+                  </button>
+                  <button
+                    class="btn btn-outline-success"
+                    onclick="addToCalendar('مسرحية الحلم الكبير', '15 أكتوبر 2025', 'المسرح الوطني')"
+                  >
+                    📅 أضف للتقويم
+                  </button>
+                  <button
+                    class="btn btn-outline-info"
+                    onclick="shareEvent('مسرحية الحلم الكبير')"
+                  >
+                    📤 شارك الفعالية
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tips Card -->
+            <div class="card shadow mb-4">
+              <div class="card-body">
+                <h5 class="card-title">💡 نصائح مهمة</h5>
+                <ul class="mb-0">
+                  <li>احجز تذكرتك مبكراً لضمان المقعد</li>
+                  <li>الوصول قبل 30 دقيقة من العرض</li>
+                  <li>يُمنع التصوير أثناء العرض</li>
+                  <li>الالتزام بالزي المناسب</li>
+                  <li>إغلاق الهواتف المحمولة أثناء العرض</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Facilities Card -->
+            <div class="card shadow">
+              <div class="card-body">
+                <h5 class="card-title">✨ المرافق المتوفرة</h5>
+                <ul class="mb-0">
+                  <li>✅ مواقف سيارات مجانية</li>
+                  <li>✅ مقهى ومطعم</li>
+                  <li>✅ مرافق لذوي الاحتياجات الخاصة</li>
+                  <li>✅ تكييف مركزي</li>
+                  <li>✅ مقاعد مريحة</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">🎫 حجز تذكرة</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6 id="modalEventName" class="mb-3"></h6>
+            <form id="bookingForm">
+              <div class="mb-3">
+                <label for="bookingName" class="form-label"
+                  >الاسم الكامل <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookingName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookingEmail" class="form-label"
+                  >البريد الإلكتروني <span class="text-danger">*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="bookingEmail"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="bookingPhone" class="form-label"
+                  >رقم الهاتف <span class="text-danger">*</span></label
+                >
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="bookingPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ticketCount" class="form-label"
+                  >عدد التذاكر <span class="text-danger">*</span></label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="ticketCount"
+                  min="1"
+                  max="10"
+                  value="1"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="ticketType" class="form-label"
+                  >نوع التذكرة <span class="text-danger">*</span></label
+                >
+                <select class="form-select" id="ticketType" required>
+                  <option value="regular">عادي - 500 ل.س</option>
+                  <option value="vip">VIP - 800 ل.س</option>
+                </select>
+              </div>
+              <div class="alert alert-info">
+                <small>💡 ستصلك رسالة تأكيد على البريد الإلكتروني</small>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              إلغاء
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              onclick="submitBooking()"
+            >
+              تأكيد الحجز
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer --> 
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>دليل فعاليات المدينة</h5>
+            <p>دليلك الشامل لجميع الفعاليات والأنشطة في مدينتك</p>
+          </div>
+          <div class="col-md-4">
+            <h5>تواصل معنا</h5>
+            <p>📧 info@it-engineer-squad.com</p>
+            <p>📱 +963-333-757-575</p>
+          </div>
+          <div class="col-md-4">
+            <h5>تابعنا</h5>
+            <p>
+              <a href="#" class="text-white me-3">Facebook</a>
+              <a href="#" class="text-white me-3">Twitter</a>
+              <a href="#" class="text-white">Instagram</a>
+            </p>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="text-center">
+          <p class="mb-0">© 2025 دليل فعاليات المدينة. جميع الحقوق محفوظة.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function openBookingModal(eventName) {
+        document.getElementById("modalEventName").textContent = eventName;
+        var bookingModal = new bootstrap.Modal(
+          document.getElementById("bookingModal")
+        );
+        bookingModal.show();
+      }
+
+      function addToCalendar(eventName, date, location) {
+        alert('تم إضافة فعالية "' + eventName + '" إلى تقويمك');
+      }
+
+      function shareEvent(eventName) {
+        if (navigator.share) {
+          navigator.share({
+            title: eventName,
+            text: "تفضل بمشاركة هذه الفعالية المميزة",
+            url: window.location.href,
+          });
+        } else {
+          alert("شارك الرابط: " + window.location.href);
+        }
+      }
+
+      function submitBooking() {
+        alert("تم تأكيد حجزك بنجاح! ستصلك رسالة تأكيد على البريد الإلكتروني");
+        var bookingModal = bootstrap.Modal.getInstance(
+          document.getElementById("bookingModal")
+        );
+        bookingModal.hide();
+      }
+    </script>
+  </body>
+</html>
